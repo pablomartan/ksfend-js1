@@ -61,6 +61,8 @@ function humanPlay() {
         }
 
         failures += 1;
+
+        console.log('Invalid input!');
     } while (!Object.keys(winsTo).includes(choice.toLowerCase()))
 
     return choice.toLowerCase();
