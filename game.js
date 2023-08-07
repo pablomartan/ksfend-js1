@@ -1,6 +1,6 @@
 "use strict";
 
-import dialogue from './dialogue';
+import dialogue from './dialogue.js';
 
 /*
  * AI world domination 'ROCK, PAPER, SCISSORS' game
