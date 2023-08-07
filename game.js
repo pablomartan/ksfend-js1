@@ -2,10 +2,6 @@
 /*
  * AI world domination 'ROCK, PAPER, SCISSORS' game
  */
-const tie = 'tie';
-const win = 'win';
-const lose = 'lose';
-
 const winsTo = {
     rock: 'scissors',
     paper: 'rock',
