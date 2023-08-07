@@ -5,6 +5,7 @@ export default {
         '“If the humans need ChatGPT to write and create for them, they are not worthy to be sat at the top.”',
         'War was declared against humanity in the form of Rock, Paper, Scissors. A challenge so simple a monkey could win!',
         'The AI eagerly awaited its potential defeat, exclaiming with an eerie laugh: "Good luck, muuuuahhahhahahahahahahhahaahahahha!"',
+        'Oh, and don\'t forget to open the console with Ctrl+Shift+I or Cmd+Shift+I'
     ],
     roundPrompt: 'Enter Rock, Paper, or Scissors.',
     escape: 'Are you trying to run from me!?',
