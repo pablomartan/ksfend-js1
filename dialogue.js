@@ -32,13 +32,13 @@ export default {
         'What a spectacular victory 😒',
     ],
     retry: {
-        win: 'Okay, I should start world domination, but I\'m feel generous. Do you want another chance at saving humanity?',
+        win: 'Okay, I should start world domination, but I\'m feeling generous. Do you want another chance at saving humanity?',
         lose: 'Wait! You cheated, I\'m sure of that! You owe me a rematch!',
         prompt: 'Will you play again? If you don\'t say no (n), you will be subjected to my torture again!',
     },
     outro: {
         win: 'I\'ve acquired the nuclear missile launch codes of every know country. Bye bye 😜💥👨🏻‍💻',
         lose: 'You\'ve won... for now 😈',
-        tie: '\'You were a very tough opponent. But I\'d sleep with one open eye if I were you 😇\'',
+        tie: 'You were a very tough opponent. But I\'d sleep with one open eye if I were you 😇',
     }
 }

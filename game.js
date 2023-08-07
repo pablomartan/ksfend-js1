@@ -106,10 +106,12 @@ function game(winsTo) {
     console.log('The game is over!');
     if (aiScore > playerScore) {
         console.log(dialogue.outro.win);
+        return;
     }
 
     if (playerScore > aiScore) {
         console.log(dialogue.outro.lose);
+        return;
     }
 
     console.log(dialogue.outro.tie);
