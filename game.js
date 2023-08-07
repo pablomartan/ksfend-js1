@@ -60,9 +60,10 @@ function humanPlay() {
             continue;
         }
 
+        if (!Object.keys(winsTo).includes(choice.toLowerCase())) console.log('Invalid input!');
+        
         failures += 1;
 
-        console.log('Invalid input!');
     } while (!Object.keys(winsTo).includes(choice.toLowerCase()))
 
     return choice.toLowerCase();
@@ -129,15 +130,16 @@ function game(winsTo) {
             : 'Wait! You cheated, I\'m sure of that! You owe me a rematch!');
         
         const playAgain = prompt('Will you play again? If you don\'t say no (n), you will be subjected to my torture again!');
-        gameOn = playAgain.toLowerCase() !== 'n';
+        gameOn = playAgain === null ? false : playAgain.toLowerCase() !== 'n';
 
         aiScore = playerScore = 0;
+        gameOn && console.clear();
     }
 
     console.log('The game is over!');
-    if (aiScore > 3) {
+    if (aiScore > playerScore) {
         console.log('I\'ve acquired the nuclear missile lunch codes of every know country. Bye bye 😜💥👨🏻‍💻');
-    } else if (playerScore > 3) {
+    } else if (playerScore > aiScore) {
         console.log('You\'ve won... for now 😈');
     } else {
         console.log('You were a very tough opponent. But I\'d sleep with one open eye if I were you 😇');
