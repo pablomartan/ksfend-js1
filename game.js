@@ -8,7 +8,7 @@ import dialogue from './dialogue';
 const winsTo = {
     rock: 'scissors',
     paper: 'rock',
-    scissors: 'paper'
+    scissors: 'paper',
 };
 
 const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
@@ -48,8 +48,11 @@ function humanPlay() {
             continue;
         }
 
-        if (!Object.keys(winsTo).includes(choice.toLowerCase())) console.log('Invalid input!');
-        
+        choice = choice.trim();
+        if (!Object.keys(winsTo).includes(choice.toLowerCase())) {
+            console.log('Invalid input.');
+        }
+
         failures += 1;
 
     } while (!Object.keys(winsTo).includes(choice.toLowerCase()))
@@ -73,8 +76,8 @@ function game(winsTo) {
             playerSelection = humanPlay(winsTo);
             computerSelection = computerPlay(winsTo);
 
+            console.log(`Round ${i + 1}`);
             const result = playRound(playerSelection, computerSelection, winsTo);
-
             if (result === 'tie') {
                 console.log('It\'s a tie!');
             } else if (result === 'win') {
@@ -91,7 +94,7 @@ function game(winsTo) {
         alert(aiScore > playerScore ? dialogue.retry.win : dialogue.retry.lose);
 
         const playAgain = prompt(dialogue.retry.prompt);
-        gameOn = (playAgain === null) || playAgain.toLowerCase() !== 'n';
+        gameOn = (playAgain === null) || playAgain.trim().toLowerCase() !== 'n';
 
         if (gameOn) {
             aiScore = 0;
