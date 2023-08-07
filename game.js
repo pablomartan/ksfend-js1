@@ -125,15 +125,17 @@ function game(winsTo) {
             console.log(`Player: ${playerScore}; AI: ${aiScore}`);
         }
         
-        alert(aiScore > 3
+        alert(aiScore > playerScore
             ? 'Okay, I should start world domination, but I\'m feel generous. Do you want another chance at saving humanity?'
             : 'Wait! You cheated, I\'m sure of that! You owe me a rematch!');
         
         const playAgain = prompt('Will you play again? If you don\'t say no (n), you will be subjected to my torture again!');
-        gameOn = playAgain === null ? false : playAgain.toLowerCase() !== 'n';
+        gameOn = (playAgain === null) || playAgain.toLowerCase() !== 'n';
 
-        aiScore = playerScore = 0;
-        gameOn && console.clear();
+        if (gameOn) {
+            aiScore = playerScore = 0;
+            console.clear();
+        }
     }
 
     console.log('The game is over!');
